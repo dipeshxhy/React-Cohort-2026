@@ -10,7 +10,7 @@ const VideoDetailsPage = () => {
     <div className="container mx-auto">
       <div className="grid md:grid-cols-3 gap-4 p-4">
         <div className="col-span-2 max-w-7xl h-[500px] space-y-6">
-          <VideoPlayer url={url} isHovering={true} muted={true} />
+          <VideoPlayer url={url} isHovering={true} muted={false} />
           <VideoDetails videoId={id} />
         </div>
         <div className="max-w-md">
