@@ -21,6 +21,8 @@ const shows = [
 
 const App = () => {
   const name = 'Dipesh';
+
+  // fetch -> API -> Data -> variable
   return (
     <div>
       <h1>Hello Hi {name} from chaicode</h1>
@@ -29,11 +31,11 @@ const App = () => {
 
       <section className="grid">
         {shows.map((show) => (
-          <div key={show.id}>
+          <article key={show.id}>
             <h3>{show.title}</h3>
-            <p>{show.time}</p>
-            <p>{show.hall}</p>
-          </div>
+            <p className="muted">{show.time}</p>
+            <p className="tag">{show.hall}</p>
+          </article>
         ))}
       </section>
     </div>
