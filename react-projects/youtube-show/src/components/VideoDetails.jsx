@@ -1,7 +1,6 @@
-import { Chip } from '@heroui/react';
+import { Chip, Spinner } from '@heroui/react';
 import { useEffect, useState } from 'react';
 import { getVideoById } from '../services/api';
-import { Spinner } from '@heroui/react';
 
 const VideoDetails = ({ videoId }) => {
   const [details, setDetails] = useState(null);
@@ -36,7 +35,7 @@ const VideoDetails = ({ videoId }) => {
       },
     } = details;
     return (
-      <div className="space-y-6">
+      <div className="space-y-6 hidden md:block">
         <h1 className="text-4xl font-semibold">{title}</h1>
         <div>
           <span
@@ -47,7 +46,7 @@ const VideoDetails = ({ videoId }) => {
             <span className="font-bold">this video</span>
           </span>
           {showDescription && (
-            <p>
+            <p className="mt-4">
               {description.split('\n').map((line, i) => (
                 <span key={i}>
                   {line}
@@ -59,7 +58,7 @@ const VideoDetails = ({ videoId }) => {
         </div>
         <ul>
           {tags?.map((tag) => (
-            <Chip className="" key={tag}>
+            <Chip className="mr-2 mb-2" key={tag}>
               #{tag}
             </Chip>
           ))}

@@ -34,7 +34,7 @@ const Videos = () => {
   }
 
   return (
-    <div className="grid sm:grid-cols-2 md:grid-cols-4  gap-y-20 gap-4 p-4 ">
+    <div className="grid w-full sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-y-20 gap-4 p-4 ">
       {videos.map(({ items }) => {
         const {
           id,

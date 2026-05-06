@@ -11,7 +11,9 @@ const VideoDetailsPage = () => {
       <div className="grid md:grid-cols-3 gap-4 p-4">
         <div className="col-span-2 max-w-7xl h-[500px] space-y-6">
           <VideoPlayer url={url} isHovering={true} muted={false} />
-          <VideoDetails videoId={id} />
+          <div className="max-h-48 overflow-y-auto">
+            <VideoDetails videoId={id} />
+          </div>
         </div>
         <div className="max-w-md">
           <Recommendations videoId={id} />

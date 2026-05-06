@@ -34,7 +34,7 @@ const VideoCard = ({
   return (
     <Link
       to={`/video/${videoId}`}
-      className="flex flex-col shadow-md rounded-lg overflow-hidden"
+      className="flex flex-col shadow-md rounded-lg overflow-hidden mx-auto "
     >
       <div
         onMouseEnter={() => setIsHovering(true)}
