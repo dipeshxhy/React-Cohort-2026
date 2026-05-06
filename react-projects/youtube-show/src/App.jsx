@@ -6,15 +6,17 @@ import VideoDetailsPage from './pages/VideoDetailsPage';
 
 const App = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/video/:id" element={<VideoDetailsPage />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
-      <Footer />
-    </>
+      <div className="mt-auto">
+        <Footer />
+      </div>
+    </div>
   );
 };
 
